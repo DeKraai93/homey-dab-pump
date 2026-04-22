@@ -1,4 +1,9 @@
+
+
 # DAB Pumps for Homey
+
+![CI](https://github.com/DeKraai93/homey-dab-pump/actions/workflows/ci.yml/badge.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 Control and monitor your DAB H2D water pumps directly from Homey.
 
