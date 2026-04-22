@@ -1,11 +1,40 @@
 {
-  "extends": "@tsconfig/node16/tsconfig.json",
   "compilerOptions": {
-    "outDir": ".homeybuild",
+    "lib": [
+      "es2021"
+    ],
+    "module": "node16",
+    "target": "es2021",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node16",
+    "outDir": "./.homeybuild",
     "sourceMap": true,
-    "types": ["node"]
+    "types": [
+      "node"
+    ],
+    "moduleDetection": "force",
+    "resolveJsonModule": false,
+    "useDefineForClassFields": false
   },
+  "files": [
+    "./app.ts",
+    "./drivers/dab-pump/device.ts",
+    "./drivers/dab-pump/driver.ts",
+    "./drivers/esybox/device.ts",
+    "./drivers/esybox/driver.ts",
+    "./lib/dab-client.ts",
+    "./lib/dab-state.ts",
+    "./lib/pump-features.ts",
+    "./lib/pump-model.ts",
+    "./lib/pump-profile.ts"
+  ],
   "include": [
     "**/*.ts"
+  ],
+  "exclude": [
+    ".homeybuild",
+    "node_modules"
   ]
 }
