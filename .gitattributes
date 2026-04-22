@@ -1,0 +1,11 @@
+* text=auto
+
+# Force LF for code (best practice)
+*.ts text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.md text eol=lf
+
+# Windows scripts (if any later)
+*.ps1 text eol=crlf
