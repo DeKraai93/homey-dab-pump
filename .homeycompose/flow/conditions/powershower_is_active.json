@@ -2,5 +2,12 @@
   "title": {
     "en": "PowerShower !{{is|isn't}} active",
     "nl": "PowerShower !{{is|is niet}} actief"
-  }
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=dab-pump|esybox"
+    }
+  ]
 }

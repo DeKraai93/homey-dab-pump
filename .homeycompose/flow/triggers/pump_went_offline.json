@@ -3,5 +3,12 @@
     "en": "The pump went offline",
     "nl": "De pomp is offline gegaan"
   },
-  "highlight": true
+  "highlight": true,
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=dab-pump|esybox"
+    }
+  ]
 }

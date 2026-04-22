@@ -1,6 +1,14 @@
 {
   "title": {
-    "en": "The pump stopped",
-    "nl": "De pomp is gestopt"
-  }
+    "en": "The pump started",
+    "nl": "De pomp is gestart"
+  },
+  "highlight": true,
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=dab-pump|esybox"
+    }
+  ]
 }

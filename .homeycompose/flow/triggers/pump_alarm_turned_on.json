@@ -3,5 +3,12 @@
     "en": "The pump alarm turned on",
     "nl": "Het pomp alarm is aangegaan"
   },
-  "highlight": true
+  "highlight": true,
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=dab-pump|esybox"
+    }
+  ]
 }

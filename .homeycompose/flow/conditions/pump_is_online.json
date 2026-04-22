@@ -1,6 +1,13 @@
 {
   "title": {
-    "en": "The pump !{{is|isn't}} online",
-    "nl": "De pomp !{{is|is niet}} online"
-  }
+    "en": "The pump !{{is|isn't}} running",
+    "nl": "De pomp !{{is|is niet}} actief"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=dab-pump|esybox"
+    }
+  ]
 }

@@ -2,5 +2,12 @@
   "title": {
     "en": "The pump alarm cleared",
     "nl": "Het pomp alarm is opgelost"
-  }
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=dab-pump|esybox"
+    }
+  ]
 }

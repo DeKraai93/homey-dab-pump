@@ -2,5 +2,12 @@
   "title": {
     "en": "PowerShower turned off",
     "nl": "PowerShower is uitgezet"
-  }
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=dab-pump|esybox"
+    }
+  ]
 }

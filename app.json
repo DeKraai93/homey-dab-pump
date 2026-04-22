@@ -35,6 +35,13 @@
           "en": "PowerShower turned off",
           "nl": "PowerShower is uitgezet"
         },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=dab-pump|esybox"
+          }
+        ],
         "id": "powershower_turned_off"
       },
       {
@@ -42,6 +49,13 @@
           "en": "PowerShower turned on",
           "nl": "PowerShower is aangezet"
         },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=dab-pump|esybox"
+          }
+        ],
         "id": "powershower_turned_on"
       },
       {
@@ -49,6 +63,13 @@
           "en": "The pump alarm cleared",
           "nl": "Het pomp alarm is opgelost"
         },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=dab-pump|esybox"
+          }
+        ],
         "id": "pump_alarm_cleared"
       },
       {
@@ -57,6 +78,13 @@
           "nl": "Het pomp alarm is aangegaan"
         },
         "highlight": true,
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=dab-pump|esybox"
+          }
+        ],
         "id": "pump_alarm_turned_on"
       },
       {
@@ -64,6 +92,13 @@
           "en": "The pump came online",
           "nl": "De pomp is online gekomen"
         },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=dab-pump|esybox"
+          }
+        ],
         "id": "pump_came_online"
       },
       {
@@ -72,13 +107,28 @@
           "nl": "De pomp is gestart"
         },
         "highlight": true,
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=dab-pump|esybox"
+          }
+        ],
         "id": "pump_started"
       },
       {
         "title": {
-          "en": "The pump stopped",
-          "nl": "De pomp is gestopt"
+          "en": "The pump started",
+          "nl": "De pomp is gestart"
         },
+        "highlight": true,
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=dab-pump|esybox"
+          }
+        ],
         "id": "pump_stopped"
       },
       {
@@ -87,6 +137,13 @@
           "nl": "De pomp is offline gegaan"
         },
         "highlight": true,
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=dab-pump|esybox"
+          }
+        ],
         "id": "pump_went_offline"
       },
       {
@@ -94,6 +151,13 @@
           "en": "Sleep mode turned off",
           "nl": "Slaapmodus is uitgezet"
         },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=dab-pump|esybox"
+          }
+        ],
         "id": "sleepmode_turned_off"
       },
       {
@@ -101,6 +165,13 @@
           "en": "Sleep mode turned on",
           "nl": "Slaapmodus is aangezet"
         },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=dab-pump|esybox"
+          }
+        ],
         "id": "sleepmode_turned_on"
       },
       {
@@ -108,6 +179,13 @@
           "en": "Water flow started",
           "nl": "Waterstroming gestart"
         },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=dab-pump|esybox"
+          }
+        ],
         "id": "water_flow_started"
       },
       {
@@ -115,6 +193,13 @@
           "en": "Water flow stopped",
           "nl": "Waterstroming gestopt"
         },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=dab-pump|esybox"
+          }
+        ],
         "id": "water_flow_stopped"
       }
     ],
@@ -124,6 +209,13 @@
           "en": "PowerShower !{{is|isn't}} active",
           "nl": "PowerShower !{{is|is niet}} actief"
         },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=dab-pump|esybox"
+          }
+        ],
         "id": "powershower_is_active"
       },
       {
@@ -131,13 +223,27 @@
           "en": "The pump !{{has|doesn't have}} an alarm",
           "nl": "De pomp !{{heeft|heeft geen}} alarm"
         },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=dab-pump|esybox"
+          }
+        ],
         "id": "pump_has_alarm"
       },
       {
         "title": {
-          "en": "The pump !{{is|isn't}} online",
-          "nl": "De pomp !{{is|is niet}} online"
+          "en": "The pump !{{is|isn't}} running",
+          "nl": "De pomp !{{is|is niet}} actief"
         },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=dab-pump|esybox"
+          }
+        ],
         "id": "pump_is_online"
       },
       {
@@ -145,6 +251,13 @@
           "en": "The pump !{{is|isn't}} running",
           "nl": "De pomp !{{is|is niet}} actief"
         },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=dab-pump|esybox"
+          }
+        ],
         "id": "pump_is_running"
       },
       {
@@ -152,6 +265,13 @@
           "en": "Sleep mode !{{is|isn't}} active",
           "nl": "Slaapmodus !{{is|is niet}} actief"
         },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=dab-pump|esybox"
+          }
+        ],
         "id": "sleepmode_is_active"
       },
       {
@@ -159,6 +279,13 @@
           "en": "Water !{{is|isn't}} flowing",
           "nl": "Water !{{stroomt|stroomt niet}}"
         },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=dab-pump|esybox"
+          }
+        ],
         "id": "water_is_flowing"
       }
     ],
@@ -172,6 +299,13 @@
           "en": "Generate diagnostic report",
           "nl": "Maak diagnostisch rapport"
         },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=dab-pump|esybox"
+          }
+        ],
         "id": "generate_diagnostic_report"
       },
       {
@@ -180,9 +314,16 @@
           "nl": "Ververs pompstatus"
         },
         "titleFormatted": {
-          "en": "Refresh the pump state",
-          "nl": "Ververs de pompstatus"
+          "en": "Refresh pump state",
+          "nl": "Ververs pompstatus"
         },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=dab-pump|esybox"
+          }
+        ],
         "id": "refresh_pump_state"
       },
       {
@@ -195,6 +336,11 @@
           "nl": "Zet PowerShower op [[state]]"
         },
         "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=dab-pump|esybox"
+          },
           {
             "type": "dropdown",
             "name": "state",
@@ -232,6 +378,11 @@
           "nl": "Zet slaapmodus op [[state]]"
         },
         "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=dab-pump|esybox"
+          },
           {
             "type": "dropdown",
             "name": "state",

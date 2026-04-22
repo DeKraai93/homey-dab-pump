@@ -6,5 +6,12 @@
   "titleFormatted": {
     "en": "Generate diagnostic report",
     "nl": "Maak diagnostisch rapport"
-  }
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=dab-pump|esybox"
+    }
+  ]
 }
