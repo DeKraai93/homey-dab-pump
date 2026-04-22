@@ -12,8 +12,7 @@
     "en": "DAB Pump"
   },
   "description": {
-  "en": "Making Water Easy",
-  "nl": "Making Water Easy"
+    "en": "Making Water Easy"
   },
   "category": [
     "tools"
@@ -25,6 +24,7 @@
     "xlarge": "/assets/images/xlarge.png"
   },
   "author": {
-    "name": "H. Wolters"
-  }
+    "name": "DeKraai93"
+  },
+  "support": "https://github.com/DeKraai93/homey-dab-pump/issues"
 }
