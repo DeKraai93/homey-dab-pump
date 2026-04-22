@@ -1,0 +1,669 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "com.wolters.dab",
+  "version": "1.0.0",
+  "compatibility": ">=13.0.0",
+  "sdk": 3,
+  "brandColor": "#114D2B",
+  "runtime": "nodejs",
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "DAB Pump"
+  },
+  "description": {
+    "en": "Making Water Easy",
+    "nl": "Making Water Easy"
+  },
+  "category": [
+    "tools"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "H. Wolters"
+  },
+  "flow": {
+    "triggers": [
+      {
+        "title": {
+          "en": "PowerShower turned off",
+          "nl": "PowerShower is uitgezet"
+        },
+        "id": "powershower_turned_off"
+      },
+      {
+        "title": {
+          "en": "PowerShower turned on",
+          "nl": "PowerShower is aangezet"
+        },
+        "id": "powershower_turned_on"
+      },
+      {
+        "title": {
+          "en": "The pump alarm cleared",
+          "nl": "Het pomp alarm is opgelost"
+        },
+        "id": "pump_alarm_cleared"
+      },
+      {
+        "title": {
+          "en": "The pump alarm turned on",
+          "nl": "Het pomp alarm is aangegaan"
+        },
+        "highlight": true,
+        "id": "pump_alarm_turned_on"
+      },
+      {
+        "title": {
+          "en": "The pump came online",
+          "nl": "De pomp is online gekomen"
+        },
+        "id": "pump_came_online"
+      },
+      {
+        "title": {
+          "en": "The pump started",
+          "nl": "De pomp is gestart"
+        },
+        "highlight": true,
+        "id": "pump_started"
+      },
+      {
+        "title": {
+          "en": "The pump stopped",
+          "nl": "De pomp is gestopt"
+        },
+        "id": "pump_stopped"
+      },
+      {
+        "title": {
+          "en": "The pump went offline",
+          "nl": "De pomp is offline gegaan"
+        },
+        "highlight": true,
+        "id": "pump_went_offline"
+      },
+      {
+        "title": {
+          "en": "Sleep mode turned off",
+          "nl": "Slaapmodus is uitgezet"
+        },
+        "id": "sleepmode_turned_off"
+      },
+      {
+        "title": {
+          "en": "Sleep mode turned on",
+          "nl": "Slaapmodus is aangezet"
+        },
+        "id": "sleepmode_turned_on"
+      },
+      {
+        "title": {
+          "en": "Water flow started",
+          "nl": "Waterstroming gestart"
+        },
+        "id": "water_flow_started"
+      },
+      {
+        "title": {
+          "en": "Water flow stopped",
+          "nl": "Waterstroming gestopt"
+        },
+        "id": "water_flow_stopped"
+      }
+    ],
+    "conditions": [
+      {
+        "title": {
+          "en": "PowerShower !{{is|isn't}} active",
+          "nl": "PowerShower !{{is|is niet}} actief"
+        },
+        "id": "powershower_is_active"
+      },
+      {
+        "title": {
+          "en": "The pump !{{has|doesn't have}} an alarm",
+          "nl": "De pomp !{{heeft|heeft geen}} alarm"
+        },
+        "id": "pump_has_alarm"
+      },
+      {
+        "title": {
+          "en": "The pump !{{is|isn't}} online",
+          "nl": "De pomp !{{is|is niet}} online"
+        },
+        "id": "pump_is_online"
+      },
+      {
+        "title": {
+          "en": "The pump !{{is|isn't}} running",
+          "nl": "De pomp !{{is|is niet}} actief"
+        },
+        "id": "pump_is_running"
+      },
+      {
+        "title": {
+          "en": "Sleep mode !{{is|isn't}} active",
+          "nl": "Slaapmodus !{{is|is niet}} actief"
+        },
+        "id": "sleepmode_is_active"
+      },
+      {
+        "title": {
+          "en": "Water !{{is|isn't}} flowing",
+          "nl": "Water !{{stroomt|stroomt niet}}"
+        },
+        "id": "water_is_flowing"
+      }
+    ],
+    "actions": [
+      {
+        "title": {
+          "en": "Generate diagnostic report",
+          "nl": "Maak diagnostisch rapport"
+        },
+        "titleFormatted": {
+          "en": "Generate diagnostic report",
+          "nl": "Maak diagnostisch rapport"
+        },
+        "id": "generate_diagnostic_report"
+      },
+      {
+        "title": {
+          "en": "Refresh pump state",
+          "nl": "Ververs pompstatus"
+        },
+        "titleFormatted": {
+          "en": "Refresh the pump state",
+          "nl": "Ververs de pompstatus"
+        },
+        "id": "refresh_pump_state"
+      },
+      {
+        "title": {
+          "en": "Set PowerShower",
+          "nl": "Stel PowerShower in"
+        },
+        "titleFormatted": {
+          "en": "Set PowerShower to [[state]]",
+          "nl": "Zet PowerShower op [[state]]"
+        },
+        "args": [
+          {
+            "type": "dropdown",
+            "name": "state",
+            "title": {
+              "en": "State",
+              "nl": "Status"
+            },
+            "values": [
+              {
+                "id": "on",
+                "title": {
+                  "en": "On",
+                  "nl": "Aan"
+                }
+              },
+              {
+                "id": "off",
+                "title": {
+                  "en": "Off",
+                  "nl": "Uit"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "set_powershower"
+      },
+      {
+        "title": {
+          "en": "Set sleep mode",
+          "nl": "Stel slaapmodus in"
+        },
+        "titleFormatted": {
+          "en": "Set sleep mode to [[state]]",
+          "nl": "Zet slaapmodus op [[state]]"
+        },
+        "args": [
+          {
+            "type": "dropdown",
+            "name": "state",
+            "title": {
+              "en": "State",
+              "nl": "Status"
+            },
+            "values": [
+              {
+                "id": "on",
+                "title": {
+                  "en": "On",
+                  "nl": "Aan"
+                }
+              },
+              {
+                "id": "off",
+                "title": {
+                  "en": "Off",
+                  "nl": "Uit"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "set_sleepmode"
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "DAB Pump (Generic)",
+        "nl": "DAB Pump (Generiek)"
+      },
+      "class": "pump",
+      "capabilities": [
+        "measure_pressure",
+        "dab_suction_pressure",
+        "dab_target_pressure",
+        "dab_flow_l_min",
+        "measure_power",
+        "measure_temperature",
+        "meter_power",
+        "onoff",
+        "alarm_generic",
+        "dab_powershower_active",
+        "dab_powershower_pressure",
+        "dab_powershower_countdown",
+        "dab_sleepmode_enabled",
+        "dab_sleepmode_pressure",
+        "dab_sleepmode_countdown"
+      ],
+      "capabilitiesOptions": {
+        "measure_pressure": {
+          "units": {
+            "en": "bar"
+          },
+          "decimals": 1
+        },
+        "dab_suction_pressure": {
+          "units": {
+            "en": "bar"
+          },
+          "decimals": 1
+        },
+        "dab_target_pressure": {
+          "units": {
+            "en": "bar"
+          },
+          "decimals": 1
+        },
+        "dab_flow_l_min": {
+          "units": {
+            "en": "L/min"
+          },
+          "decimals": 0
+        },
+        "measure_power": {
+          "units": {
+            "en": "W"
+          },
+          "decimals": 0
+        },
+        "measure_temperature": {
+          "units": {
+            "en": "°C"
+          },
+          "decimals": 0
+        },
+        "meter_power": {
+          "units": {
+            "en": "kWh"
+          },
+          "decimals": 1
+        },
+        "dab_powershower_pressure": {
+          "units": {
+            "en": "bar"
+          },
+          "decimals": 1
+        },
+        "dab_powershower_countdown": {
+          "units": {
+            "en": "s"
+          },
+          "decimals": 0
+        },
+        "dab_sleepmode_pressure": {
+          "units": {
+            "en": "bar"
+          },
+          "decimals": 1
+        },
+        "dab_sleepmode_countdown": {
+          "units": {
+            "en": "s"
+          },
+          "decimals": 0
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
+      "images": {
+        "small": "/drivers/dab-pump/assets/images/small.png",
+        "large": "/drivers/dab-pump/assets/images/large.png",
+        "xlarge": "/drivers/dab-pump/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "login_credentials",
+          "template": "login_credentials",
+          "options": {
+            "title": {
+              "en": "Connect a generic DAB H2D device",
+              "nl": "Verbind een generiek DAB H2D-apparaat"
+            }
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": true
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "dab-pump"
+    },
+    {
+      "name": {
+        "en": "Esybox",
+        "nl": "Esybox"
+      },
+      "class": "pump",
+      "capabilities": [
+        "measure_pressure",
+        "dab_suction_pressure",
+        "dab_target_pressure",
+        "dab_flow_l_min",
+        "measure_power",
+        "measure_temperature",
+        "meter_power",
+        "onoff",
+        "alarm_generic",
+        "dab_powershower_active",
+        "dab_powershower_pressure",
+        "dab_powershower_countdown",
+        "dab_sleepmode_enabled",
+        "dab_sleepmode_pressure",
+        "dab_sleepmode_countdown"
+      ],
+      "capabilitiesOptions": {
+        "measure_pressure": {
+          "units": {
+            "en": "bar"
+          },
+          "decimals": 1
+        },
+        "dab_suction_pressure": {
+          "units": {
+            "en": "bar"
+          },
+          "decimals": 1
+        },
+        "dab_target_pressure": {
+          "units": {
+            "en": "bar"
+          },
+          "decimals": 1
+        },
+        "dab_flow_l_min": {
+          "units": {
+            "en": "L/min"
+          },
+          "decimals": 0
+        },
+        "measure_power": {
+          "units": {
+            "en": "W"
+          },
+          "decimals": 0
+        },
+        "measure_temperature": {
+          "units": {
+            "en": "°C"
+          },
+          "decimals": 0
+        },
+        "meter_power": {
+          "units": {
+            "en": "kWh"
+          },
+          "decimals": 1
+        },
+        "dab_powershower_pressure": {
+          "units": {
+            "en": "bar"
+          },
+          "decimals": 1
+        },
+        "dab_powershower_countdown": {
+          "units": {
+            "en": "s"
+          },
+          "decimals": 0
+        },
+        "dab_sleepmode_pressure": {
+          "units": {
+            "en": "bar"
+          },
+          "decimals": 1
+        },
+        "dab_sleepmode_countdown": {
+          "units": {
+            "en": "s"
+          },
+          "decimals": 0
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
+      "images": {
+        "small": "/drivers/esybox/assets/images/small.png",
+        "large": "/drivers/esybox/assets/images/large.png",
+        "xlarge": "/drivers/esybox/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "login_credentials",
+          "template": "login_credentials",
+          "options": {
+            "title": {
+              "en": "Connect your Esybox",
+              "nl": "Verbind je Esybox"
+            }
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": true
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "esybox"
+    }
+  ],
+  "capabilities": {
+    "dab_flow_l_min": {
+      "type": "number",
+      "title": {
+        "en": "Flow"
+      },
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "L/min"
+      },
+      "decimals": 0,
+      "insights": true,
+      "icon": "/assets/capabilities/dab_flow_l_min.svg"
+    },
+    "dab_powershower_active": {
+      "type": "boolean",
+      "title": {
+        "en": "PowerShower",
+        "nl": "PowerShower"
+      },
+      "uiComponent": "toggle",
+      "getable": true,
+      "setable": true,
+      "uiQuickAction": false,
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "PowerShower turned on",
+        "nl": "PowerShower ingeschakeld"
+      },
+      "insightsTitleFalse": {
+        "en": "PowerShower turned off",
+        "nl": "PowerShower uitgeschakeld"
+      }
+    },
+    "dab_powershower_countdown": {
+      "type": "number",
+      "title": {
+        "en": "PowerShower countdown"
+      },
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "s"
+      },
+      "decimals": 0,
+      "insights": true,
+      "icon": "/assets/capabilities/dab_powershower_countdown.svg"
+    },
+    "dab_powershower_pressure": {
+      "type": "number",
+      "title": {
+        "en": "PowerShower pressure"
+      },
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "bar"
+      },
+      "decimals": 1,
+      "insights": true,
+      "icon": "/assets/capabilities/dab_suction_pressure.svg"
+    },
+    "dab_sleepmode_countdown": {
+      "type": "number",
+      "title": {
+        "en": "Sleep mode countdown"
+      },
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "s"
+      },
+      "decimals": 0,
+      "insights": true,
+      "icon": "/assets/capabilities/dab_powershower_countdown.svg"
+    },
+    "dab_sleepmode_enabled": {
+      "type": "boolean",
+      "title": {
+        "en": "Sleep mode",
+        "nl": "Slaapmodus"
+      },
+      "uiComponent": "toggle",
+      "getable": true,
+      "setable": true,
+      "uiQuickAction": false,
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "Sleep mode turned on",
+        "nl": "Slaapmodus ingeschakeld"
+      },
+      "insightsTitleFalse": {
+        "en": "Sleep mode turned off",
+        "nl": "Slaapmodus uitgeschakeld"
+      }
+    },
+    "dab_sleepmode_pressure": {
+      "type": "number",
+      "title": {
+        "en": "Sleep mode pressure"
+      },
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "bar"
+      },
+      "decimals": 1,
+      "insights": true,
+      "icon": "/assets/capabilities/dab_target_pressure.svg"
+    },
+    "dab_suction_pressure": {
+      "type": "number",
+      "title": {
+        "en": "Suction pressure"
+      },
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "bar"
+      },
+      "decimals": 1,
+      "insights": true,
+      "icon": "/assets/capabilities/dab_suction_pressure.svg"
+    },
+    "dab_target_pressure": {
+      "type": "number",
+      "title": {
+        "en": "Target pressure"
+      },
+      "uiComponent": "sensor",
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "bar"
+      },
+      "decimals": 1,
+      "insights": true,
+      "icon": "/assets/capabilities/dab_target_pressure.svg"
+    }
+  }
+}

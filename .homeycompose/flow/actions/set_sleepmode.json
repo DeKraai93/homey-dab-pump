@@ -1,0 +1,36 @@
+{
+  "title": {
+    "en": "Set sleep mode",
+    "nl": "Stel slaapmodus in"
+  },
+  "titleFormatted": {
+    "en": "Set sleep mode to [[state]]",
+    "nl": "Zet slaapmodus op [[state]]"
+  },
+  "args": [
+    {
+      "type": "dropdown",
+      "name": "state",
+      "title": {
+        "en": "State",
+        "nl": "Status"
+      },
+      "values": [
+        {
+          "id": "on",
+          "title": {
+            "en": "On",
+            "nl": "Aan"
+          }
+        },
+        {
+          "id": "off",
+          "title": {
+            "en": "Off",
+            "nl": "Uit"
+          }
+        }
+      ]
+    }
+  ]
+}

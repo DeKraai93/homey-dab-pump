@@ -1,0 +1,15 @@
+{
+  "type": "number",
+  "title": {
+    "en": "PowerShower pressure"
+  },
+  "uiComponent": "sensor",
+  "getable": true,
+  "setable": false,
+  "units": {
+    "en": "bar"
+  },
+  "decimals": 1,
+  "insights": true,
+  "icon": "/assets/capabilities/dab_suction_pressure.svg"
+}

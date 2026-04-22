@@ -1,0 +1,20 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "PowerShower",
+    "nl": "PowerShower"
+  },
+  "uiComponent": "toggle",
+  "getable": true,
+  "setable": true,
+  "uiQuickAction": false,
+  "insights": true,
+  "insightsTitleTrue": {
+    "en": "PowerShower turned on",
+    "nl": "PowerShower ingeschakeld"
+  },
+  "insightsTitleFalse": {
+    "en": "PowerShower turned off",
+    "nl": "PowerShower uitgeschakeld"
+  }
+}

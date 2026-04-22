@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="/homey.js" data-origin="settings"></script>
+  </head>
+  <body>
+    <div style="padding: 20px;">
+      <h1>DAB Pump</h1>
+      <button id="next">Continue</button>
+    </div>
+
+    <script>
+      document.getElementById('next').addEventListener('click', async () => {
+        Homey.showView('list_devices');
+      });
+    </script>
+  </body>
+</html>

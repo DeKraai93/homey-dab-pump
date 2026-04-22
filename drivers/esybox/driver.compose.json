@@ -1,0 +1,127 @@
+{
+  "name": {
+    "en": "Esybox",
+    "nl": "Esybox"
+  },
+  "class": "pump",
+  "capabilities": [
+    "measure_pressure",
+    "dab_suction_pressure",
+    "dab_target_pressure",
+    "dab_flow_l_min",
+    "measure_power",
+    "measure_temperature",
+    "meter_power",
+    "onoff",
+    "alarm_generic",
+    "dab_powershower_active",
+    "dab_powershower_pressure",
+    "dab_powershower_countdown",
+    "dab_sleepmode_enabled",
+    "dab_sleepmode_pressure",
+    "dab_sleepmode_countdown"
+  ],
+  "capabilitiesOptions": {
+    "measure_pressure": {
+      "units": {
+        "en": "bar"
+      },
+      "decimals": 1
+    },
+    "dab_suction_pressure": {
+      "units": {
+        "en": "bar"
+      },
+      "decimals": 1
+    },
+    "dab_target_pressure": {
+      "units": {
+        "en": "bar"
+      },
+      "decimals": 1
+    },
+    "dab_flow_l_min": {
+      "units": {
+        "en": "L/min"
+      },
+      "decimals": 0
+    },
+    "measure_power": {
+      "units": {
+        "en": "W"
+      },
+      "decimals": 0
+    },
+    "measure_temperature": {
+      "units": {
+        "en": "°C"
+      },
+      "decimals": 0
+    },
+    "meter_power": {
+      "units": {
+        "en": "kWh"
+      },
+      "decimals": 1
+    },
+    "dab_powershower_pressure": {
+      "units": {
+        "en": "bar"
+      },
+      "decimals": 1
+    },
+    "dab_powershower_countdown": {
+      "units": {
+        "en": "s"
+      },
+      "decimals": 0
+    },
+    "dab_sleepmode_pressure": {
+      "units": {
+        "en": "bar"
+      },
+      "decimals": 1
+    },
+    "dab_sleepmode_countdown": {
+      "units": {
+        "en": "s"
+      },
+      "decimals": 0
+    }
+  },
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [],
+  "images": {
+    "small": "/drivers/esybox/assets/images/small.png",
+    "large": "/drivers/esybox/assets/images/large.png",
+    "xlarge": "/drivers/esybox/assets/images/xlarge.png"
+  },
+  "pair": [
+    {
+      "id": "login_credentials",
+      "template": "login_credentials",
+      "options": {
+        "title": {
+          "en": "Connect your Esybox",
+          "nl": "Verbind je Esybox"
+        }
+      }
+    },
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      },
+      "options": {
+        "singular": true
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ]
+}

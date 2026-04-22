@@ -1,0 +1,235 @@
+{
+  "triggers": [
+    {
+      "id": "pump_started",
+      "title": {
+        "en": "The pump started",
+        "nl": "De pomp is gestart"
+      },
+      "highlight": true
+    },
+    {
+      "id": "pump_stopped",
+      "title": {
+        "en": "The pump stopped",
+        "nl": "De pomp is gestopt"
+      }
+    },
+    {
+      "id": "pump_came_online",
+      "title": {
+        "en": "The pump came online",
+        "nl": "De pomp is online gekomen"
+      }
+    },
+    {
+      "id": "pump_went_offline",
+      "title": {
+        "en": "The pump went offline",
+        "nl": "De pomp is offline gegaan"
+      },
+      "highlight": true
+    },
+    {
+      "id": "pump_alarm_turned_on",
+      "title": {
+        "en": "The pump alarm turned on",
+        "nl": "Het pomp alarm is aangegaan"
+      },
+      "highlight": true
+    },
+    {
+      "id": "pump_alarm_cleared",
+      "title": {
+        "en": "The pump alarm cleared",
+        "nl": "Het pomp alarm is opgelost"
+      }
+    },
+    {
+      "id": "powershower_turned_on",
+      "title": {
+        "en": "PowerShower turned on",
+        "nl": "PowerShower is aangezet"
+      }
+    },
+    {
+      "id": "powershower_turned_off",
+      "title": {
+        "en": "PowerShower turned off",
+        "nl": "PowerShower is uitgezet"
+      }
+    },
+    {
+      "id": "sleepmode_turned_on",
+      "title": {
+        "en": "Sleep mode turned on",
+        "nl": "Slaapmodus is aangezet"
+      }
+    },
+    {
+      "id": "sleepmode_turned_off",
+      "title": {
+        "en": "Sleep mode turned off",
+        "nl": "Slaapmodus is uitgezet"
+      }
+    },
+    {
+      "id": "water_flow_started",
+      "title": {
+        "en": "Water flow started",
+        "nl": "Waterstroming gestart"
+      }
+    },
+    {
+      "id": "water_flow_stopped",
+      "title": {
+        "en": "Water flow stopped",
+        "nl": "Waterstroming gestopt"
+      }
+    }
+  ],
+
+  "conditions": [
+    {
+      "id": "pump_is_running",
+      "title": {
+        "en": "The pump !{{is|isn't}} running",
+        "nl": "De pomp !{{is|is niet}} actief"
+      }
+    },
+    {
+      "id": "pump_is_online",
+      "title": {
+        "en": "The pump !{{is|isn't}} online",
+        "nl": "De pomp !{{is|is niet}} online"
+      }
+    },
+    {
+      "id": "pump_has_alarm",
+      "title": {
+        "en": "The pump !{{has|doesn't have}} an alarm",
+        "nl": "De pomp !{{heeft|heeft geen}} alarm"
+      }
+    },
+    {
+      "id": "powershower_is_active",
+      "title": {
+        "en": "PowerShower !{{is|isn't}} active",
+        "nl": "PowerShower !{{is|is niet}} actief"
+      }
+    },
+    {
+      "id": "sleepmode_is_active",
+      "title": {
+        "en": "Sleep mode !{{is|isn't}} active",
+        "nl": "Slaapmodus !{{is|is niet}} actief"
+      }
+    },
+    {
+      "id": "water_is_flowing",
+      "title": {
+        "en": "Water !{{is|isn't}} flowing",
+        "nl": "Water !{{stroomt|stroomt niet}}"
+      }
+    }
+  ],
+
+  "actions": [
+    {
+      "id": "refresh_pump_state",
+      "title": {
+        "en": "Refresh pump state",
+        "nl": "Ververs pompstatus"
+      },
+      "titleFormatted": {
+        "en": "Refresh the pump state",
+        "nl": "Ververs de pompstatus"
+      }
+    },
+        {
+      "id": "set_powershower",
+      "title": {
+        "en": "Set PowerShower",
+        "nl": "Stel PowerShower in"
+      },
+      "titleFormatted": {
+        "en": "Set PowerShower to [[state]]",
+        "nl": "Zet PowerShower op [[state]]"
+      },
+      "args": [
+        {
+          "type": "dropdown",
+          "name": "state",
+          "title": {
+            "en": "State",
+            "nl": "Status"
+          },
+          "values": [
+            {
+              "id": "on",
+              "title": {
+                "en": "On",
+                "nl": "Aan"
+              }
+            },
+            {
+              "id": "off",
+              "title": {
+                "en": "Off",
+                "nl": "Uit"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "generate_diagnostic_report",
+      "title": {
+        "en": "Generate diagnostic report",
+        "nl": "Maak diagnostisch rapport"
+      },
+      "titleFormatted": {
+        "en": "Generate diagnostic report",
+        "nl": "Maak diagnostisch rapport"
+      }
+    },	
+    {
+      "id": "set_sleepmode",
+      "title": {
+        "en": "Set sleep mode",
+        "nl": "Stel slaapmodus in"
+      },
+      "titleFormatted": {
+        "en": "Set sleep mode to [[state]]",
+        "nl": "Zet slaapmodus op [[state]]"
+      },
+      "args": [
+        {
+          "type": "dropdown",
+          "name": "state",
+          "title": {
+            "en": "State",
+            "nl": "Status"
+          },
+          "values": [
+            {
+              "id": "on",
+              "title": {
+                "en": "On",
+                "nl": "Aan"
+              }
+            },
+            {
+              "id": "off",
+              "title": {
+                "en": "Off",
+                "nl": "Uit"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

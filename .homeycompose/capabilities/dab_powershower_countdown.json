@@ -1,0 +1,15 @@
+{
+  "type": "number",
+  "title": {
+    "en": "PowerShower countdown"
+  },
+  "uiComponent": "sensor",
+  "getable": true,
+  "setable": false,
+  "units": {
+    "en": "s"
+  },
+  "decimals": 0,
+  "insights": true,
+  "icon": "/assets/capabilities/dab_powershower_countdown.svg"
+}
