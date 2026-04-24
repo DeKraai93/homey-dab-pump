@@ -416,7 +416,18 @@ export class DABClient {
       _debugStatusPayload: null,
     };
   }
+  async getDeviceConfiguration(configurationId: string): Promise<any> {
+  await this.login();
 
+  const response = await this.api.get(
+    `${DCONNECT_API_URL}/api/v1/configuration/${configurationId}`,
+    {
+      headers: this.getAuthHeaders(),
+    },
+  );
+
+  return response.data;
+  }
   async getDeviceState(installationId: string, serial: string): Promise<any> {
     await this.login();
 
@@ -505,24 +516,24 @@ export class DABClient {
     if (response.data?.res && response.data.res !== 'OK') {
       throw new Error(response.data?.message || 'DConnect write rejected');
     }
-  }
+	}
 
-  async setPumpEnabled(serial: string, enabled: boolean): Promise<void> {
-    const code = enabled ? '0' : '1';
-    await this.setDeviceParam(serial, 'PumpDisable', code);
-  }
+	async setPumpEnabled(serial: string, enabled: boolean): Promise<void> {
+	const code = enabled ? '0' : '1';
+	await this.setDeviceParam(serial, 'PumpDisable', code);
+	}
 
-  async setPowerShowerEnabled(serial: string, enabled: boolean): Promise<void> {
-    const code = enabled ? '1' : '0';
-    await this.setDeviceParam(serial, 'PowerShowerCommand', code);
-  }
+	async setPowerShowerEnabled(serial: string, enabled: boolean): Promise<void> {
+	const code = enabled ? '1' : '2';
+	await this.setDeviceParam(serial, 'PowerShowerCommand', code);
+	}
 
-  async setSleepModeEnabled(serial: string, enabled: boolean): Promise<void> {
-    const code = enabled ? '1' : '0';
-    await this.setDeviceParam(serial, 'SleepModeEnable', code);
-  }
+	async setSleepModeEnabled(serial: string, enabled: boolean): Promise<void> {
+	const code = enabled ? '1' : '0';
+	await this.setDeviceParam(serial, 'SleepModeEnable', code);
+	}
 
-  async listDevices(): Promise<DABDevice[]> {
+	async listDevices(): Promise<DABDevice[]> {
     const installations = await this.getInstallations();
 
     if (!installations.length) {

@@ -64,9 +64,9 @@ class MyDevice extends Homey.Device {
     const store = this.getStore();
 
     const username = store.username;
-    const password = store.password;
-    this.installationId = store.installationId || '';
-    this.serial = store.serial || this.getData().id || '';
+	const password = store.password;
+	this.installationId = store.installationId || '';
+	this.serial = store.serial || this.getData().id || '';
 
     if (!username || !password || !this.installationId || !this.serial) {
       this.error('Missing device store data', {
@@ -80,7 +80,7 @@ class MyDevice extends Homey.Device {
     }
 
     this.client = new DABClient(username, password);
-
+	
     if (this.hasCapability('onoff')) {
       await this.setCapabilityValue('onoff', true);
     }
@@ -171,7 +171,7 @@ class MyDevice extends Homey.Device {
   }
 
   async setPowerShowerFromFlow(enabled: boolean): Promise<void> {
-    await this.setPowerShowerEnabled(enabled);
+  await this.setPowerShowerEnabled(enabled);
   }
 
   async setSleepModeFromFlow(enabled: boolean): Promise<void> {
@@ -285,42 +285,42 @@ class MyDevice extends Homey.Device {
 
   private async setPowerShowerEnabled(value: boolean): Promise<void> {
     if (!this.client) {
-      throw new Error('DAB client not initialized');
+    throw new Error('DAB client not initialized');
     }
 
-    if (DEBUG) {
-      this.log(`dab_powershower_active => ${value}`);
-    }
+	if (DEBUG) {
+    this.log(`dab_powershower_active => ${value}`);
+	}
 
-    try {
-      await this.client.setPowerShowerEnabled(this.serial, value);
+	try {
+    await this.client.setPowerShowerEnabled(this.serial, value);
 
-      setTimeout(async () => {
-        try {
-          await this.updateState();
-        } catch (error) {
-          this.error('Post-write PowerShower refresh failed', error);
-        }
-      }, 2000);
-
-      setTimeout(async () => {
-        try {
-          await this.updateState();
-        } catch (error) {
-          this.error('Delayed PowerShower refresh failed', error);
-        }
-      }, 8000);
-    } catch (error: any) {
-      this.error('PowerShower write failed', error);
-
+    setTimeout(async () => {
       try {
         await this.updateState();
-      } catch (refreshError) {
-        this.error('State refresh after failed PowerShower write also failed', refreshError);
+      } catch (error) {
+        this.error('Post-write PowerShower refresh failed', error);
       }
+    }, 2000);
 
-      throw new Error(this.getUserFriendlyError(error));
+    setTimeout(async () => {
+      try {
+        await this.updateState();
+      } catch (error) {
+        this.error('Delayed PowerShower refresh failed', error);
+      }
+    }, 8000);
+	} catch (error: any) {
+    this.error('PowerShower write failed', error);
+
+    try {
+      await this.updateState();
+    } catch (refreshError) {
+      this.error('State refresh after failed PowerShower write also failed', refreshError);
     }
+
+    throw new Error(this.getUserFriendlyError(error));
+	}
   }
 
   private async setSleepModeEnabled(value: boolean): Promise<void> {
