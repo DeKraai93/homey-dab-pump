@@ -10,5 +10,8 @@
   },
   "1.0.3": {
     "en": "Updated app and driver images"
+  },
+  "1.1.0": {
+    "en": "Fix PowerShower enum handling and confirm Sleepmode behavior"
   }
 }
